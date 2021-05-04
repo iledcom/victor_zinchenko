@@ -1,0 +1,12 @@
+<?php
+
+CREATE TABLE article (
+		art_id INTEGER PRIMARY KEY NOT NULL AUTO_INCREMENT,
+		title VARCHAR(255) NOT NULL,
+    date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+		short_content TEXT NOT NULL,
+		content TEXT NOT NULL,
+		preview VARCHAR(255) NOT NULL,
+		author_name VARCHAR(255) NOT NULL,
+		type VARCHAR(50)
+	)

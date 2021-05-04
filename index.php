@@ -1,35 +1,6 @@
 <?php
 
-class Vehicle {
-	public $color;
-	public $speed;
-	public $brand;
-
-	public function tripTime($distance) {
-		$time = $distance / $this->speed;
-		return $time;
-	}
-}
-
-class Bicycle extends Vehicle {
-	public $type;
-	const CALORIES_PER_HOUR = 500;
-
-	public function caloriesBurned($distance) {
-		$time = $this->tripTime($distance);
-		$calories = $time * self::CALORIES_PER_HOUR;
-		return $calories;
-	}
-}
-
-class Car extends Vehicle {
-	public $fuel;
-
-	public function fuelConsumption($distance) {
-		$result = ($this->fuel * $distance) / 100;
-		return $result;
-	}
-}
+require_once 'Vehicle.php';
 
 $car1 = new Car;
 $car1->speed = 110;
